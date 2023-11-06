@@ -16,6 +16,14 @@ module.exports = {
         icon: 'src/assets/favicon.png',
       },
     },
+        {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        url: process.env.GATSBY_API_URL,
+        typeName: `WORDPRESS`,
+        fieldName: `wp`,
+      },
+    },
     'gatsby-plugin-netlify',
   ],
 };
